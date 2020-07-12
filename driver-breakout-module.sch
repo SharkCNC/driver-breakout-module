@@ -1,0 +1,322 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SharkCNC - Driver Breakout Module"
+Date "2020-07-12"
+Rev "v1"
+Comp "VM"
+Comment1 "Simple RJ45 Breakout board flor Closed Loop Driver"
+Comment2 "author: vitalibr"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:8P8C_Shielded J1
+U 1 1 5EFD299B
+P 4050 4150
+F 0 "J1" H 4050 4800 50  0000 C CNN
+F 1 "RJ45" H 4050 4700 50  0000 C CNN
+F 2 "Connector_RJ:RJ45_Ninigi_GE" V 4050 4175 50  0001 C CNN
+F 3 "~" V 4050 4175 50  0001 C CNN
+	1    4050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5EFD60AC
+P 5600 3400
+F 0 "D1" H 5593 3145 50  0000 C CNN
+F 1 "LED" H 5593 3236 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5600 3400 50  0001 C CNN
+F 3 "~" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	-1   0    0    1   
+$EndComp
+Text Notes 6200 3900 0    50   ~ 0
+PUL+
+Text Notes 6200 4000 0    50   ~ 0
+PUL-
+Text Notes 6200 4100 0    50   ~ 0
+DIR+
+Text Notes 6200 4200 0    50   ~ 0
+DIR-
+Text Notes 6200 4300 0    50   ~ 0
+ENA+
+Text Notes 6200 4400 0    50   ~ 0
+ENA-
+$Comp
+L power:GND #PWR01
+U 1 1 5EFD9BD9
+P 4600 3600
+F 0 "#PWR01" H 4600 3350 50  0001 C CNN
+F 1 "GND" H 4605 3427 50  0000 C CNN
+F 2 "" H 4600 3600 50  0001 C CNN
+F 3 "" H 4600 3600 50  0001 C CNN
+	1    4600 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4450 3750 4600 3750
+Wire Wire Line
+	4600 3750 4600 3600
+Wire Wire Line
+	4050 4650 4050 4950
+$Comp
+L power:GND #PWR02
+U 1 1 5EFDAB10
+P 4750 5050
+F 0 "#PWR02" H 4750 4800 50  0001 C CNN
+F 1 "GND" H 4755 4877 50  0000 C CNN
+F 2 "" H 4750 5050 50  0001 C CNN
+F 3 "" H 4750 5050 50  0001 C CNN
+	1    4750 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4950 4750 4950
+Wire Wire Line
+	4750 4950 4750 5050
+$Comp
+L power:+24V #PWR03
+U 1 1 5EFDC0B6
+P 4850 3600
+F 0 "#PWR03" H 4850 3450 50  0001 C CNN
+F 1 "+24V" H 4865 3773 50  0000 C CNN
+F 2 "" H 4850 3600 50  0001 C CNN
+F 3 "" H 4850 3600 50  0001 C CNN
+	1    4850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EFDDDA4
+P 5200 3600
+F 0 "R1" H 5270 3646 50  0000 L CNN
+F 1 "1.2k" H 5270 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 3600 50  0001 C CNN
+F 3 "~" H 5200 3600 50  0001 C CNN
+	1    5200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3400 5200 3400
+Wire Wire Line
+	5200 3400 5200 3450
+$Comp
+L power:GND #PWR07
+U 1 1 5EFDEEF6
+P 5950 3400
+F 0 "#PWR07" H 5950 3150 50  0001 C CNN
+F 1 "GND" V 5955 3272 50  0000 R CNN
+F 2 "" H 5950 3400 50  0001 C CNN
+F 3 "" H 5950 3400 50  0001 C CNN
+	1    5950 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5950 3400 5750 3400
+$Comp
+L power:+24V #PWR04
+U 1 1 5EFDF5D0
+P 5550 3850
+F 0 "#PWR04" H 5550 3700 50  0001 C CNN
+F 1 "+24V" V 5565 3978 50  0000 L CNN
+F 2 "" H 5550 3850 50  0001 C CNN
+F 3 "" H 5550 3850 50  0001 C CNN
+	1    5550 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+24V #PWR05
+U 1 1 5EFDFA48
+P 5550 4050
+F 0 "#PWR05" H 5550 3900 50  0001 C CNN
+F 1 "+24V" V 5565 4178 50  0000 L CNN
+F 2 "" H 5550 4050 50  0001 C CNN
+F 3 "" H 5550 4050 50  0001 C CNN
+	1    5550 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+24V #PWR06
+U 1 1 5EFDFBDB
+P 5550 4250
+F 0 "#PWR06" H 5550 4100 50  0001 C CNN
+F 1 "+24V" V 5565 4378 50  0000 L CNN
+F 2 "" H 5550 4250 50  0001 C CNN
+F 3 "" H 5550 4250 50  0001 C CNN
+	1    5550 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5800 4050 5950 4050
+Wire Wire Line
+	5950 3850 5800 3850
+Wire Wire Line
+	5800 4250 5950 4250
+$Comp
+L Device:Jumper JP1
+U 1 1 5EFD7610
+P 4350 4950
+F 0 "JP1" H 4350 5214 50  0000 C CNN
+F 1 "Shield" H 4350 5123 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4350 4950 50  0001 C CNN
+F 3 "~" H 4350 4950 50  0001 C CNN
+	1    4350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J2
+U 1 1 5F0733EF
+P 6150 4250
+F 0 "J2" H 6100 4850 50  0000 L CNN
+F 1 "DRIVER" H 6000 4750 50  0000 L CNN
+F 2 "driver-breakout-module:PinHeader_1x10_P5.08mm_Vertical" H 6150 4250 50  0001 C CNN
+F 3 "~" H 6150 4250 50  0001 C CNN
+	1    6150 4250
+	1    0    0    -1  
+$EndComp
+Text Notes 6200 4500 0    50   ~ 0
+PEND+
+Text Notes 6200 4600 0    50   ~ 0
+PEND-
+Text Notes 6200 4700 0    50   ~ 0
+ALM+
+Text Notes 6200 4800 0    50   ~ 0
+ALM-
+$Comp
+L power:GND #PWR08
+U 1 1 5F075840
+P 5850 4850
+F 0 "#PWR08" H 5850 4600 50  0001 C CNN
+F 1 "GND" H 5855 4677 50  0000 C CNN
+F 2 "" H 5850 4850 50  0001 C CNN
+F 3 "" H 5850 4850 50  0001 C CNN
+	1    5850 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4750 5850 4750
+Wire Wire Line
+	5850 4750 5850 4850
+Wire Wire Line
+	5950 4550 5850 4550
+Wire Wire Line
+	5850 4550 5850 4750
+Connection ~ 5850 4750
+Wire Wire Line
+	4450 3850 4850 3850
+Wire Wire Line
+	4850 3600 4850 3850
+Wire Wire Line
+	4450 3950 4850 3950
+Wire Wire Line
+	4850 3950 4850 3850
+Connection ~ 4850 3850
+Wire Wire Line
+	5200 3850 4850 3850
+Wire Wire Line
+	5200 3750 5200 3850
+$Comp
+L Device:R_Small R2
+U 1 1 5F078A8D
+P 5700 3850
+F 0 "R2" V 5750 3950 50  0000 L CNN
+F 1 "2k" V 5700 3800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5700 3850 50  0001 C CNN
+F 3 "~" H 5700 3850 50  0001 C CNN
+	1    5700 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 4150 5150 4350
+Wire Wire Line
+	5150 4350 4450 4350
+Wire Wire Line
+	5150 4150 5950 4150
+Wire Wire Line
+	4450 4250 5050 4250
+Wire Wire Line
+	5050 4250 5050 3950
+Wire Wire Line
+	5050 3950 5950 3950
+Wire Wire Line
+	5550 3850 5600 3850
+$Comp
+L Device:R_Small R3
+U 1 1 5F07B545
+P 5700 4050
+F 0 "R3" V 5750 4150 50  0000 L CNN
+F 1 "2k" V 5700 4000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5700 4050 50  0001 C CNN
+F 3 "~" H 5700 4050 50  0001 C CNN
+	1    5700 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5F07B686
+P 5700 4250
+F 0 "R4" V 5750 4350 50  0000 L CNN
+F 1 "2k" V 5700 4200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5700 4250 50  0001 C CNN
+F 3 "~" H 5700 4250 50  0001 C CNN
+	1    5700 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5F07B734
+P 5700 4450
+F 0 "R5" V 5750 4550 50  0000 L CNN
+F 1 "2k" V 5700 4400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5700 4450 50  0001 C CNN
+F 3 "~" H 5700 4450 50  0001 C CNN
+	1    5700 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5F07B9EB
+P 5700 4650
+F 0 "R6" V 5750 4750 50  0000 L CNN
+F 1 "2k" V 5700 4600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5700 4650 50  0001 C CNN
+F 3 "~" H 5700 4650 50  0001 C CNN
+	1    5700 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4450 5950 4450
+Wire Wire Line
+	5950 4650 5800 4650
+Wire Wire Line
+	5550 4250 5600 4250
+Wire Wire Line
+	5550 4050 5600 4050
+Wire Wire Line
+	5250 4350 5250 4450
+Wire Wire Line
+	5250 4450 4450 4450
+Wire Wire Line
+	5250 4350 5950 4350
+Wire Wire Line
+	5600 4450 5350 4450
+Wire Wire Line
+	5350 4450 5350 4550
+Wire Wire Line
+	5350 4550 4750 4550
+Wire Wire Line
+	4750 4550 4750 4050
+Wire Wire Line
+	4750 4050 4450 4050
+Wire Wire Line
+	5600 4650 4550 4650
+Wire Wire Line
+	4550 4650 4550 4150
+Wire Wire Line
+	4550 4150 4450 4150
+$EndSCHEMATC
